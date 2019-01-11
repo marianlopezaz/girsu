@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Congreso GIRSU II</title>
+    <title>II Congreso Internacional GIRSU</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

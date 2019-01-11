@@ -4,86 +4,61 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Congreso GIRSU II</title>
+        <title>II Congreso Internacional GIRSU</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins" rel="stylesheet">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                Congreso GIRSU II
-                </div>
+        <nav class="navbar navbar-expand-md colorAzulFuerte">
+            <a class="navbar-brand principal" href="{{ url('/') }}"><img src="{{asset('css/images/logo.png')}}" width="45" height="56"/></a>
+            <a class="marca nunito principal" href="{{ url('/') }}">II Congreso Internacional GIRSU</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="fas fa-bars"></span>
+            </button>
+            <div id="navbar" class="navbar-collapse collapse">
+                @if (Route::has('login'))
+                    <div class="top-right links navbar-nav">
+                        @auth
+                            <a class="nav-link home" href="{{ url('/home') }}"><span class="fas fa-home"></span></a>
+                        @else
+                            <a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a>
+                            @if (Route::has('register'))
+                                <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
             </div>
-        </div>
+        </nav>
+
+        <div class="content">
+            <div class="title m-b-md nunito">
+                Congreso Internacional Sobre Gestión Integral de Residuos Sólidos Urbanos
+            </div>
+        </div>   
+        <footer class="montserrat">
+            <p>
+                Desarrolado por
+                <a href="https://www.prolinesi.com/" target="_blank">Proline</a>
+            </p>
+            <ul>
+                <a href="https://www.instagram.com/proline_si/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/ProLine-225185394816589/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="mailto:prolinesi4146@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+                <a href="https://www.prolinesi.com/" target="_blank"><i class="fas fa-globe"></i></a>
+            </ul>
+        </footer>
     </body>
 </html>
