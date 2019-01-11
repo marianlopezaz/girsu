@@ -7,6 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('GIRSU.ico') }}">
     <title>Congreso GIRSU II</title>
 
     <!-- Scripts -->
