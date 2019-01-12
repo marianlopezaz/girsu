@@ -1,0 +1,55 @@
+.colorAzulFuerte{
+    background-color: #274351;
+    box-shadow: 1px 3px 8px #b1b1b1; 
+}
+
+.navbar-brand {
+    transition: all 0.5s;
+}
+
+.navbar-brand:hover {
+    transform: scale(0.97);
+}
+
+.card {
+    box-shadow: 1px 3px 8px #b1b1b1; 
+}
+
+.btn-girsu {
+    background-color: #274351;
+    color: #B6C521;
+}
+
+.btn-girsu:hover {
+    background-color: #274351c0;
+}
+
+.btn-girsu-contraseña {
+    color: #274351;
+}
+
+.btn-girsu-contraseña:hover {
+    color: #B6C521;
+}
+
+.card-header {
+    background-color: #274351;
+    color: #B6C521;
+}
+
+.nunito {
+    font-family: 'Nunito', 'sans-serif';
+}
+
+.montserrat {
+    font-family: 'Montserrat', 'sans-serif';  
+}
+
+.poppins {
+    font-family: 'Poppins', 'sans-serif';
+}
+.bienvenido {
+    font-size: 50px;
+    color: #636b6f;
+    font-weight: 0;
+}

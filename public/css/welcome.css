@@ -27,11 +27,6 @@ html, body {
     justify-content: center;
 }
 
-.top-right {
-    position: absolute;
-    right: 30px;
-    top: 26px;
-}
 nav {
     box-shadow: 1px 3px 8px #b1b1b1; 
     padding: 10px;
@@ -132,6 +127,13 @@ footer {
   footer ul a:visited {
     color: rgb(233, 233, 233);
   }
+@media(min-width: 1900px){
+    body{
+        background-position-x: 100%;
+        background-position-y: 100%;
+    }
+}
+
 
 @media(max-width: 1000px){
     body{
@@ -164,12 +166,25 @@ footer {
         font-size: 50px;
     }
 
-    #navbar {
-        margin-right: 80%; 
+    .links{
+        border-top: 0.5px solid rgba(255, 255, 255, 0.301);
+        margin-top: 1%; 
     }
 
     .links > a {
+        margin-top: 5px;
         margin-bottom: 5px;
+        background-color: transparent;
+    }
+
+    #reg, #insesion {
+        display: block;
+        margin-left: 5%;
+        border-radius: 0px; 
+    }
+    #reg{
+        border-top: 0.5px solid rgba(255, 255, 255, 0.301);
+        margin-right: 5%;
     }
 }
 

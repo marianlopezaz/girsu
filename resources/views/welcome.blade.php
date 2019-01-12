@@ -16,9 +16,7 @@
 
         <!-- Icons -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+    
     </head>
     <body>
         <nav class="navbar navbar-expand-md colorAzulFuerte">
@@ -29,13 +27,13 @@
             </button>
             <div id="navbar" class="navbar-collapse collapse">
                 @if (Route::has('login'))
-                    <div class="top-right links navbar-nav">
+                    <div class="links navbar-nav ml-md-auto">
                         @auth
-                            <a class="nav-link home" href="{{ url('/home') }}"><span class="fas fa-home"></span></a>
+                            <a class="home" href="{{ url('/home') }}"><span class="fas fa-home"></span></a>
                         @else
-                            <a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a>
+                            <a id="insesion" href="{{ route('login') }}">Iniciar Sesión</a>
                             @if (Route::has('register'))
-                                <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
+                                <a id="reg" href="{{ route('register') }}">Registrarse</a>
                             @endif
                         @endauth
                     </div>
@@ -60,5 +58,10 @@
                 <a href="https://www.prolinesi.com/" target="_blank"><i class="fas fa-globe"></i></a>
             </ul>
         </footer>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     </body>
 </html>
