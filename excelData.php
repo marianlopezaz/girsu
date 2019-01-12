@@ -36,4 +36,8 @@ $worksheet = $worksheets[0];
 
 $listFeed = $worksheet->getListFeed();
 
-
+/*
+foreach ($listFeed->getEntries() as $entry) {
+    $representative = $entry->getValues();
+    print_r($representative);
+}
