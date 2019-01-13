@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
         <title>II Congreso Internacional GIRSU</title>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('GIRSU.ico') }}">
+
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
