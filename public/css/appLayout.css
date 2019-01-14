@@ -80,10 +80,20 @@ button.navbar-toggler {
 
 .inscriptos{
     border-top: 0.5px solid rgba(0, 0, 0, 0.247);
+    padding-right: 30px; 
+}
+
+.inscriptosI {
+    border-top: 0.5px solid rgba(0, 0, 0, 0.247);
+    padding-right: 10px; 
 }
 
 .paddingYB{
     padding-bottom: 150%;
+}
+.iconosHome {
+    font-size: 20px;
+    margin-right: 5px;
 }
 
 @media(max-width: 767px){

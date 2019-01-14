@@ -10,8 +10,8 @@
                     <div class="card paddingYB">
                         <div class="card-body">
                             <ul class="navbar-nav navegacion">
-                                <li class="nav-item py-2 active nunito"><a class="nav-link" href="{{ url('/home') }}"><span class="fas fa-user-check userCheck"></span> Acreditados</a></li>
-                                <li class="nav-item py-2 nunito inscriptos"><a class="nav-link" href="{{ url('/inscriptos') }}"><span class="fas fa-users users"></span> Inscriptos</a></li>
+                                <li class="nav-item py-2 active nunito"><a class="nav-link" href="{{ url('/home') }}"><span class="fas fa-user-check iconosHome"></span> Acreditados</a></li>
+                                <li class="nav-item py-2 nunito inscriptos"><a class="nav-link" href="{{ url('/inscriptos') }}"><span class="fas fa-users iconosHome"></span> Inscriptos</a></li>
                             </ul>
                         </div>
                     </div>
