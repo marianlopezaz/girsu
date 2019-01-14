@@ -3,7 +3,7 @@
 @section('content')
 <center>
 <h1>
-Acreditados
+INVITADOS
 </h1>
 </center>
 <?php
@@ -25,7 +25,7 @@ require '../excelData.php' //CODIGO QUE TRAE LA DATA DEL EXCEL;
     <tr>
         <?php
         /** @var ListEntry */
-foreach ($listFeedAcreditados->getEntries() as $entry) {
+foreach ($listFeedInvitados->getEntries() as $entry) {
     $representative = $entry->getValues();
         ?>
         <td><?php echo $representative['firstname'] ?></td>

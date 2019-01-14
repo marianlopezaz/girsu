@@ -32,12 +32,15 @@ $spreadsheet = (new Google\Spreadsheet\SpreadsheetService)
 
 // Get the first worksheet (tab)
 $worksheets = $spreadsheet->getWorksheetFeed()->getEntries();
-$worksheet = $worksheets[0];
+$worksheet = $worksheets[0]; //hoja de acreditados
+$worksheet2 = $worksheets[1]; //hoja de invitados
 
-$listFeed = $worksheet->getListFeed();
+$listFeedAcreditados = $worksheet->getListFeed();
+$listFeedInvitados = $worksheet2->getListFeed();
 
-/*
-foreach ($listFeed->getEntries() as $entry) {
+/* SCRIPT QUE TRAE LA LISTA DE ACREDITADOS DE EXCECL 
+
+foreach ($listFeedAcreditados->getEntries() as $entry) {
     $representative = $entry->getValues();
     print_r($representative);
 }
