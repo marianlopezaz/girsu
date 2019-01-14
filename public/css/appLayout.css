@@ -58,6 +58,34 @@ button.navbar-toggler {
     font-weight: 0;
 }
 
+/*Home, Inscriptos navbar*/
+.navegacion a{
+    color: #274351;
+    transition: all 0.2s;
+}
+
+.navegacion a span{
+    color: #B6C521;
+}
+
+.navegacion a:hover{
+    color: #274351;
+    transform: translateX(5px);
+}
+
+.active {
+    transform: translateX(5px);
+    text-transform: uppercase;
+}
+
+.inscriptos{
+    border-top: 0.5px solid rgba(0, 0, 0, 0.247);
+}
+
+.paddingYB{
+    padding-bottom: 150%;
+}
+
 @media(max-width: 767px){
     .navbar-light .navbar-nav .nav-link{
         margin: 5px;
@@ -85,5 +113,9 @@ button.navbar-toggler {
     .dropdown-item:hover{
         background-color: #274351;
         transform: scale(0.97);
+    }
+
+    .paddingYB{
+        padding-bottom: 0%;
     }
 }
