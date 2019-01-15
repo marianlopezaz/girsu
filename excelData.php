@@ -7,7 +7,7 @@ use Google\Spreadsheet\DefaultServiceRequest;
 use Google\Spreadsheet\ServiceRequestFactory;
 
 
-putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '\credentials.json');
+putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/credentials.json');
 $client = new Google_Client;
 $client->useApplicationDefaultCredentials();
 
