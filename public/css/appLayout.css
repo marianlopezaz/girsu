@@ -1,0 +1,131 @@
+.colorAzulFuerte{
+    background-color: #274351;
+    box-shadow: 1px 3px 8px #b1b1b1; 
+}
+
+.navbar-brand {
+    transition: all 0.5s;
+}
+
+button.navbar-toggler {
+    color: #ffffff;
+    font-size: 26px;
+}
+.navbar-brand:hover {
+    transform: scale(0.97);
+}
+
+.card {
+    box-shadow: 1px 3px 8px #b1b1b1; 
+}
+
+.btn-girsu {
+    background-color: #274351;
+    color: #B6C521;
+}
+
+.btn-girsu:hover {
+    background-color: #274351c0;
+}
+
+.btn-girsu-contraseña {
+    color: #274351;
+}
+
+.btn-girsu-contraseña:hover {
+    color: #B6C521;
+}
+
+.card-header {
+    background-color: #274351;
+    color: #B6C521;
+}
+
+.nunito {
+    font-family: 'Nunito', 'sans-serif';
+}
+
+.montserrat {
+    font-family: 'Montserrat', 'sans-serif';  
+}
+
+.poppins {
+    font-family: 'Poppins', 'sans-serif';
+}
+.bienvenido {
+    font-size: 50px;
+    color: #636b6f;
+    font-weight: 0;
+}
+
+/*Home, Inscriptos navbar*/
+.navegacion a{
+    color: #274351;
+    transition: all 0.2s;
+}
+
+.navegacion a span{
+    color: #B6C521;
+}
+
+.navegacion a:hover{
+    color: #274351;
+    transform: translateX(5px);
+}
+
+.active {
+    transform: translateX(5px);
+    text-transform: uppercase;
+}
+
+.inscriptos{
+    border-top: 0.5px solid rgba(0, 0, 0, 0.247);
+    padding-right: 30px; 
+}
+
+.inscriptosI {
+    border-top: 0.5px solid rgba(0, 0, 0, 0.247);
+    padding-right: 10px; 
+}
+
+.paddingYB{
+    padding-bottom: 150%;
+}
+.iconosHome {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+@media(max-width: 767px){
+    .navbar-light .navbar-nav .nav-link{
+        margin: 5px;
+        border-radius: 0%;
+        border: 0;
+        padding-left: 5px; 
+        border-top: 0.5px solid rgba(255, 255, 255, 0.301);
+        transition: all 0.5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+        transform: scale(0.97);
+        background-color: #274351;
+    }
+    
+    .navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover{
+        background-color: #274351;
+        color: #ffffff;
+    }
+
+    .dropdown-item{
+        transition: all 0.5s;
+    }
+
+    .dropdown-item:hover{
+        background-color: #274351;
+        transform: scale(0.97);
+    }
+
+    .paddingYB{
+        padding-bottom: 0%;
+    }
+}

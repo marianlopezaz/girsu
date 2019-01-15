@@ -19,5 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/inscriptos', 'InscriptosController@index')->name('inscriptos');
+
+
 
 Route::get('/invitados', 'InvitadosController@index')->name('invitados');
