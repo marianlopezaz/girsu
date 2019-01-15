@@ -8,7 +8,7 @@ Acreditados
 </center>
 <?php
 require '../vendor/autoload.php';
-require '../excelData.php' //CODIGO QUE TRAE LA DATA DEL EXCEL;
+require '../excelData.php'; //CODIGO QUE TRAE LA DATA DEL EXCEL;
 ?>
 <center>
 <table border=1>
