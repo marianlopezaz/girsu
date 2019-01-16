@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class InvitadosController extends Controller
 {
    public function index(){
-       return view('invitados');
-   }
+       require '..\excelData.php';
+       $invitados = $listFeedInvitados->getEntries();
+       //dd(sizeof($invitados));
+      return view('invitados',compact('invitados'));     
+    }
 }
+
