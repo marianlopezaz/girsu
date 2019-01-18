@@ -20,18 +20,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 m-4">
-                    <table border=1>
-                        <th>NOMBRE</th>
-                        <th>APELLIDO</th>
-                        <th>MAIL</th>
-                        <th>TIPO</th>
-                        <th>TELEFONO</th>
-                        <th>DNI</th>
-                        <th>COMPAÑIA</th>
-                        <th>TRABAJO</th>
-                        <th colspan=2>IMPRIMIR</th>
-
+                <div class="col-md-10">
+                    <table class='table table-hover table-responsive monserrat'>
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>NOMBRE</th>
+                                <th>APELLIDO</th>
+                                <th>MAIL</th>
+                                <th>TIPO</th>
+                                <th>TELEFONO</th>
+                                <th>DNI</th>
+                                <th>COMPAÑIA</th>
+                                <th>TRABAJO</th>
+                                <th colspan=2>IMPRIMIR</th>
+                            </tr>
+                        </thead>
                         <tr>
                             <?php
                             /** @var ListEntry */
@@ -46,8 +49,8 @@
                             <td><?php echo $representative['dni'] ?></td>
                             <td><?php echo $representative['company'] ?></td>
                             <td><?php echo $representative['jobtitle'] ?></td>
-                            <td><button>CREDENCIAL</button></td>
-                            <td><button>CERTIFICADO</button></td>
+                            <td><button class="btn btn-girsu">CREDENCIAL</button></td>
+                            <td><button class="btn btn-girsu">CERTIFICADO</button></td>
                         </tr>
                         <?php
                         }
