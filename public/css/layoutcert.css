@@ -1,0 +1,29 @@
+body {
+    background-image: url("./images/ModeloCert.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#nombre {
+    font-size: 30px;
+    font-family: 'Montserrat' ,'Segoe UI';
+    color: black;
+    position: absolute;
+    top: 41%;
+    left: 30%;
+}
+#dni {
+    font-size: 23px;
+    font-family: 'Montserrat' ,'Segoe UI';
+    color: black;
+    position: absolute;
+    top: 46.5%;
+    left: 28%;
+}
+#caracter {
+    font-size: 23px;
+    font-family: 'Montserrat' ,'Segoe UI';
+    color: black;
+    position: absolute;
+    top: 55%;
+    left: 25%;
+}

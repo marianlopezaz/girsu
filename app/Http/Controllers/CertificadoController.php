@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
+use PDF;
 
 class CertificadoController extends Controller
 {
-    public function imprimir($id){
+    public function imprimir(){
         //busca usuario por id
-        $pdf = PDF::loadView('layoutcert');
-        return $pdf->download('certificados.pdf');
+        $pdf = PDF::loadView('layoutcert')->setPaper('a4', 'landscape');;
+        return $pdf->stream('certificado.pdf');
     }
 }

@@ -19,8 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+Route::get('/layoutcert', function() {
+    return view('layoutcert');
+});
 
 Route::get('/certificados', function () {
     return view('certificados');
 });
+
+Route::get('/pdf', 'CertificadoController@imprimir');
