@@ -17,4 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/certificados/{id}', 'CertificadoController@imprimir');
+Route::post('/certificadoVirtual/{id}', 'CertificadoController@MailVirtualIndividual');
+
+Route::post('/certificadoPre/{id}', 'CertificadoController@imprimirPreImpreso');

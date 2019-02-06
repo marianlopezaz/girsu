@@ -23,8 +23,14 @@ Route::get('/layoutcert', function() {
     return view('layoutcert');
 });
 
+Route::get('/layoutcertPre', function() {
+    return view('layoutcertPre');
+});
+
 Route::get('/certificados', function () {
     return view('certificados');
 });
 
-Route::get('/pdf', 'CertificadoController@imprimir');
+Route::get('/pdfVirtual', 'CertificadoController@imprimirVirtual');
+
+Route::get('/pdfPre', 'CertificadoController@imprimirPreImpreso');
