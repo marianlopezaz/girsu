@@ -22,3 +22,6 @@
     top: 60%;
     left: 20%;
 }
+.pagebreaker {
+    page-break-after: always;
+}

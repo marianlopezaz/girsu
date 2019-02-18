@@ -10,9 +10,12 @@
     "require": {
         "php": "^7.1.3",
         "barryvdh/laravel-dompdf": "^0.8.3",
+        "clegginabox/pdf-merger": "dev-master",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "rguedes/pdfmerger": "^1.0",
+        "yajra/laravel-datatables": "1.2"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

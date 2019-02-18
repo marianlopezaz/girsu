@@ -27,10 +27,13 @@ Route::get('/layoutcertPre', function() {
     return view('layoutcertPre');
 });
 
-Route::get('/certificados', function () {
-    return view('certificados');
-});
+Route::get('/certificados', 'CertificadoController@index');
+
+Route::get('certificados/participantes', 'CertificadoController@dataTableCertificados')->name('datatable.participantes');
+
+Route::post('/certificadoVirtual', 'CertificadoController@MailVirtualIndividual');
 
 Route::get('/pdfVirtual', 'CertificadoController@imprimirVirtual');
 
 Route::get('/pdfPre', 'CertificadoController@imprimirPreImpreso');
+

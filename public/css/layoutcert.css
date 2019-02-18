@@ -4,7 +4,7 @@ body {
     background-size: cover;
 }
 #nombre {
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'Montserrat' ,'Segoe UI';
     color: black;
     position: absolute;
@@ -25,5 +25,5 @@ body {
     color: black;
     position: absolute;
     top: 55%;
-    left: 25%;
+    left: 28%;
 }

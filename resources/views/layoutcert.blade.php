@@ -9,9 +9,9 @@
 </head>
 <body>
     <div id="campos">
-        <div id="nombre">Nicolás Baudon</div>
-        <div id="dni">41155268</div>
-        <div id="caracter">Participante</div>
+        <div id="nombre">{{ $participante-> nombre }} {{ $participante-> apellido }}</div>
+        <div id="dni">{{ $participante-> dni }}</div>
+        <div id="caracter">{{ $participante-> ticket_type }}</div>
     </div>
 </body>
 </html>
