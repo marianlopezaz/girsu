@@ -81,6 +81,6 @@
     'normal' => $fontDir . '/474f10b76136d401d855594aedc55e83',
   ),
   'montserrat' => array(
-    'normal' => $fontDir . '\139d3764f5d17bdb0b0478d4b740aad0',
+    'normal' => $fontDir . '/139d3764f5d17bdb0b0478d4b740aad0',
   ),
 ) ?>

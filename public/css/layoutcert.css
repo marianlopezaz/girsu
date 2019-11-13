@@ -4,26 +4,30 @@ body {
     background-size: cover;
 }
 #nombre {
-    font-size: 28px;
-    font-family: 'Montserrat' ,'Segoe UI';
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
     position: absolute;
     top: 41%;
-    left: 30%;
+    left: 32%;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 #dni {
     font-size: 23px;
-    font-family: 'Montserrat' ,'Segoe UI';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
     position: absolute;
-    top: 46.5%;
-    left: 28%;
+    top: 41%;
+    left: 80%;
+    font-weight: 600;
 }
 #caracter {
     font-size: 23px;
-    font-family: 'Montserrat' ,'Segoe UI';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
     position: absolute;
     top: 55%;
     left: 28%;
+    display: none;
 }

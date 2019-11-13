@@ -9,8 +9,9 @@
 </head>
 <body>
     <div id="campos">
-        <div id="nombre">{{ $participante-> nombre }}</div>
-        <div id="dni">{{ $participante-> dni }}</div>
+        <div id="nombre"><?php echo e($participante-> nombre); ?> <?php echo e($participante-> apellido); ?></div>
+        <div id="dni"><?php echo e($participante-> dni); ?></div>
+        <div id="caracter"><?php echo e($participante-> ticket_type); ?></div>
     </div>
 </body>
 </html>

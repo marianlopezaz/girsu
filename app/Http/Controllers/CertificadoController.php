@@ -15,7 +15,7 @@ class CertificadoController extends Controller
         return view('certificados', compact('participantes'));
     }
     public function dataTableCertificados(){
-        $participantes = Participantes::select(['eventbrite_id', 'nombre', 'apellido', 'dni', 'ticket_type', 'mail'])->where('estadoParticipante', '=', 0);
+        $participantes = Participantes::select(['participante_id', 'nombre', 'dni', 'email']);
         return Datatables::of($participantes)->make(true);
     }
 
@@ -52,14 +52,14 @@ class CertificadoController extends Controller
     public function mailGral(Request $request){
         $ids= $request->check_mail;
         foreach($ids as $id){
-            $participante = Participantes::where('eventbrite_id', $id)->get()->first();
+            $participante = Participantes::where('participante_id', $id)->get()->first();
             //Arma el pdf
             $pdf = PDF::loadView('layoutcert', compact('participante'))->setPaper('a4', 'landscape');
             //Manda mail automaticamente
-            Mail::send(['text'=>'textoMail'],['name' => 'GIRSU II'], function($mensage) use($pdf, $participante){
-                $mensage->to($participante->mail, $participante->nombre . ' ' . $participante->apellido)->subject('Certificado Congreso Girsu II - '. $participante->nombre . ' ' . $participante->apellido);
-                $mensage->from('nicobaudon01@gmail.com', 'Nicolás');
-                $mensage->attachData($pdf->output(),'Certificado '. $participante->nombre . ' ' . $participante->apellido .'.pdf');
+            Mail::send(['text'=>'textoMail'],['name' => 'XIX Jornadas Cuyanas De Oftalmología Jornadas Regionales CAO 2019'], function($mensage) use($pdf, $participante){
+                $mensage->to($participante->email, $participante->nombre)->subject('Certificado de XIX Jornadas Cuyanas De Oftalmología Jornadas Regionales CAO 2019 - '. $participante->nombre);
+                $mensage->from('infoaccessgo@gmail.com', 'Oftalmología San Juan');
+                $mensage->attachData($pdf->output(),'Certificado de XIX Jornadas Cuyanas De Oftalmología Jornadas Regionales CAO 2019 - '. $participante->nombre .'.pdf');
             });
         }
         return redirect('certificados')->with('mensaje', 'Emails enviados correctamente');

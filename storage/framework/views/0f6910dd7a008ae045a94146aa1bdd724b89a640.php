@@ -1,9 +1,9 @@
-@extends('layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 
 <center>
-    <input id="signup-token" name="_token" type="hidden" value="{{csrf_token()}}">
+    <input id="signup-token" name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>">
     <div class="mx-5 my-1" id="alertSuccess">
     
     </div>
@@ -14,7 +14,7 @@
     <button class="btn btn-girsu" data-toggle='modal' data-target='#impresionGral'>Imprimir Certificados</button>
     <button class="btn btn-girsu" data-toggle='modal' data-target='#mailGral'>Enviar Emails</button>
     <div class="container-fluid col-md-10">
-        <table id="tableParticipantes" class="table table-hover dt-responsive nowrap table-sm" data-route="{{Route('datatable.participantes')}}"> 
+        <table id="tableParticipantes" class="table table-hover dt-responsive nowrap table-sm" data-route="<?php echo e(Route('datatable.participantes')); ?>"> 
             <thead>
             <tr>
                 <th>ID</th>
@@ -68,13 +68,13 @@
                 <div class="modal-body">
                     <input type="checkbox" class="form-check-input" id="selecTodosImp"> Seleccionar Todos<br><hr>
                     <form action="/api/impresionGral" method="post">
-                        @foreach ( $participantes as $participante )
+                        <?php $__currentLoopData = $participantes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $participante): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="form-check my-2 border-bottom">
-                                <input type="checkbox" class="form-check-input" id="checkParticipante{{ $participante->participante_id }}" name="check_impresion[]" value="{{ $participante->participante_id }}">
-                                <label class="form-check-label" for="checkParticipante{{ $participante->participante_id }}"><span class="font-weight-bold">Nombre: </span>{{ $participante->nombre }}</label><br>
-                                <label class="form-check-label" for="checkParticipante{{ $participante->participante_id }}"><span class="font-weight-bold">Dni: </span>{{ $participante->dni }}</label>
+                                <input type="checkbox" class="form-check-input" id="checkParticipante<?php echo e($participante->participante_id); ?>" name="check_impresion[]" value="<?php echo e($participante->participante_id); ?>">
+                                <label class="form-check-label" for="checkParticipante<?php echo e($participante->participante_id); ?>"><span class="font-weight-bold">Nombre: </span><?php echo e($participante->nombre); ?></label><br>
+                                <label class="form-check-label" for="checkParticipante<?php echo e($participante->participante_id); ?>"><span class="font-weight-bold">Dni: </span><?php echo e($participante->dni); ?></label>
                             </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-girsu">Imprimir</button>
                         </div>
@@ -95,13 +95,13 @@
                 <div class="modal-body">
                     <input type="checkbox" class="form-check-input" id="selecTodosMail"> Seleccionar Todos<br><hr>
                     <form action="/api/mailGral" method="post">
-                        @foreach ( $participantes as $participante )
+                        <?php $__currentLoopData = $participantes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $participante): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="form-check my-2 border-bottom">
-                                <input type="checkbox" class="form-check-input" id="checkParticipante{{ $participante->participante_id }}" name="check_mail[]" value="{{ $participante->participante_id }}">
-                                <label class="form-check-label" for="checkParticipante{{ $participante->participante_id }}"><span class="font-weight-bold">Nombre: </span>{{ $participante->nombre }}</label><br>
-                                <label class="form-check-label" for="checkParticipante{{ $participante->participante_id }}"><span class="font-weight-bold">Dni: </span>{{ $participante->dni }}</label>
+                                <input type="checkbox" class="form-check-input" id="checkParticipante<?php echo e($participante->participante_id); ?>" name="check_mail[]" value="<?php echo e($participante->participante_id); ?>">
+                                <label class="form-check-label" for="checkParticipante<?php echo e($participante->participante_id); ?>"><span class="font-weight-bold">Nombre: </span><?php echo e($participante->nombre); ?></label><br>
+                                <label class="form-check-label" for="checkParticipante<?php echo e($participante->participante_id); ?>"><span class="font-weight-bold">Dni: </span><?php echo e($participante->dni); ?></label>
                             </div>
-                        @endforeach
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-girsu">Enviar</button>
                         </div>
@@ -112,8 +112,10 @@
     </div>
 </center>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('script')
-    <script src="{{ asset('js/jsFiles/impresion.js') }}"></script>
-@endsection
+<?php $__env->startSection('script'); ?>
+    <script src="<?php echo e(asset('js/jsFiles/impresion.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
